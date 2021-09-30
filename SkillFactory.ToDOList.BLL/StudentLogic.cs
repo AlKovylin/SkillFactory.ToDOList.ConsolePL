@@ -33,6 +33,7 @@ namespace SkillFactory.ToDOList.BLL
         public Student GetById(int id)
         {
             //throw new NotImplementedException();
+            if(id < 0) { throw new ArgumentException("id < 0"); }
             return _studentDao.GetById(id);
         }
     }
